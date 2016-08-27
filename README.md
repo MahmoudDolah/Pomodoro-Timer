@@ -8,3 +8,11 @@ One way to do this is to navigate to the pomodoro-timer directory and type:
 ./pomodoro
 ```
 in a bash terminal to run the application. 
+
+While it is unlikely, the pomodoro file may not be executable. 
+To resolve this, simply type
+```
+chmod +x pomodoro
+```
+into a bash terminal window. 
+
