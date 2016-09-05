@@ -17,9 +17,9 @@ void PassTime(int timePass){
     if (timePass == WORK_TIME)
         std::cout << "Work Time: " << WORK_TIME/SEC_IN_MIN << " minutes" << std::endl;
     else if (timePass == BREAK_TIME)
-        std::cout << "Short Break Time" << BREAK_TIME/SEC_IN_MIN << " minutes" << std::endl;
+        std::cout << "Short Break Time: " << BREAK_TIME/SEC_IN_MIN << " minutes" << std::endl;
     else if (timePass == LONG_BREAK_TIME)
-        std::cout << "Extended Break Time" << LONG_BREAK_TIME/SEC_IN_MIN << " minutes" << std::endl;
+        std::cout << "Extended Break Time: " << LONG_BREAK_TIME/SEC_IN_MIN << " minutes" << std::endl;
 
     while (true){   
         time(&timer);
