@@ -2,6 +2,7 @@
 #include <time.h>
 #include <math.h>
 #include <string>
+#include <unistd.h>
 
 const double WORK_TIME = 1500;
 const double BREAK_TIME = 240;
@@ -23,9 +24,19 @@ void PassTime(int timePass){
 
     while (true){   
         time(&timer);
+        if (difftime(timer, start) == timePass* 3/4){
+            std::cout << "Time remaining: " << (timePass * 3/4)/ SEC_IN_MIN << " minutes " << std::endl;
+        }
+        if (difftime(timer, start) == timePass* 1/4){
+            std::cout << "Time remaining: " << (timePass * 1/4)/ SEC_IN_MIN << " minutes " << std::endl;
+        }
+        if (difftime(timer, start) == timePass* 1/2){
+            std::cout << "Time remaining: " << (timePass * 1/2)/ SEC_IN_MIN << " minutes " << std::endl;
+        }
         if (difftime(timer, start) == timePass){
             break;
         }
+        sleep(1);
     }
 }
 
