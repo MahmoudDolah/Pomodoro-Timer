@@ -16,3 +16,6 @@ chmod +x pomodoro
 ```
 into a bash terminal window. 
 
+Note: The fact that you cannot pause the timer is done on purpose. Getting up and eating or using the restroom counts as an extended break. I felt that adding a pause functionality would make it easy for people to ignore it.                    
+                          
+In the future, I will look to add some type of mechanism to alert the user when the time is up, I have not decided if it will be a sound, pop-up window, or something else. 
