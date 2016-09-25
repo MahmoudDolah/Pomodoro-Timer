@@ -4,9 +4,9 @@
 #include <string>
 #include <unistd.h>
 
-const double WORK_TIME = 1500;
+const double WORK_TIME = 1200;
 const double BREAK_TIME = 240;
-const double LONG_BREAK_TIME = 1200;
+const double LONG_BREAK_TIME = 900;
 const double SEC_IN_MIN = 60;
 const int TOTAL_COUNT = 3;
 
@@ -24,14 +24,14 @@ void PassTime(int timePass){
 
     while (true){   
         time(&timer);
-        if (difftime(timer, start) == timePass* 3/4){
-            std::cout << "Time remaining: " << (timePass * 3/4)/ SEC_IN_MIN << " minutes " << std::endl;
-        }
-        if (difftime(timer, start) == timePass* 1/4){
+        if (difftime(timer, start) == timePass * 3/4){
             std::cout << "Time remaining: " << (timePass * 1/4)/ SEC_IN_MIN << " minutes " << std::endl;
         }
         if (difftime(timer, start) == timePass* 1/2){
             std::cout << "Time remaining: " << (timePass * 1/2)/ SEC_IN_MIN << " minutes " << std::endl;
+        }
+        if (difftime(timer, start) == timePass* 1/4){
+            std::cout << "Time remaining: " << (timePass * 3/4)/ SEC_IN_MIN << " minutes " << std::endl;
         }
         if (difftime(timer, start) == timePass){
             break;
